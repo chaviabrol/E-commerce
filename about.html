@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About us</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <nav class="nav nav_top">
+        <div class="logo">
+            <a href= "index.html"><img src="image/bulb.jpg" width="75px"></a>
+        </div>
+        <div class="nav_side">
+            <a href="about.html">About Us</a>
+            <a href="service.html"> Services</a>
+            <a href="blog.html"> Blogs</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="#"> Login / Signup</a>
+        </div>
+    </nav>
+    <div class="about_us">
+        <h2>About Us</h2>
+        <div class="about_content">
+            <p> We started way back in the 1960s when organizations began to use Electronic Data Interchange (EDI) to transfer documents 
+                of their business back and forth. The 1990s saw the emergence of online shopping businesses, which is quite a phenomenon today. 
+                The first-ever online purchase was a Sting CD, sold by US retailer, NetMarket on 11 August 1994.</p>
+            <hr>
+            <h2>Our Mission</h2>
+            <p>Our website allows you to buy and sell tangible goods, digital products or services online.
+                Trade, be it barter exchange or buying and selling of goods and services has been prevalent for centuries. No one can be self-sufficient. 
+                And this brings out the need for demand and supply of goods and services.Transactions have been going on all over the world for centuries,
+                locally, and across locations. Keeping the same concept in mind, now think electronic. However, also bear in mind that with the whole world 
+                going online, data privacy laws have become increasingly stringent. And before you begin, an eCommerce venture you should be aware of all 
+                the legal policies required for your eCommerce website</p>
+        </div>
+    </div>
+
+    <div class="feed">
+        <h2> Write a review</h2>
+        <div class="feed_form">
+            <form name="googlesheet" method="post">
+                <input type="text" name="Name" placeholder="Name"><br>
+                <input type="email" id="email" name="Email" placeholder=" Email ID" ><br>
+                <input type="number" id="number" name="Number" placeholder="ContactNumber"><br>
+                <textarea rows ="5" cols="7" name="Review" placeholder="Write your review" name=""></textarea><br>            
+                <button type="submit"> Submit</button>
+            </form>
+        </div>
+    </div>
+<footer>
+    <div class="footer_logo">
+        <a href="index.html"><img src="image/bulb.jpg" width="75px"></a>
+    </div>
+    <div class="pages"> 
+        <h3> Pages</h3>
+        <a href=""> About Us</a> |
+        <a href=""> Services</a> |
+        <a href=""> Blogs</a> |
+        <a href="">Login</a> |
+        <a href=""> Sign Up</a> |
+    </div>
+    <div class="doc">
+        <h3> Documents</h3>
+        <a href=""> Privacy Policy</a> |
+        <a href=""> Terms Of Use</a> |
+        <a href=""> refund Policy</a> | 
+    </div>
+    <div class="social">
+        <h3>Follow Us</h3>
+        <a target ="_blank" href="https://www.facebook.com/campaign/landing.php?campaign_id=1653993517&extra_1=s%7Cc%7C318504238004%7Ce%7Cfacebook%20login%7C&placement=&creative=318504238004&keyword=facebook%20login&partner_id=googlesem&extra_2=campaignid%3D1653993517%26adgroupid%3D63066388443%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-1409285535%26loc_physical_ms%3D2356%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=CjwKCAjw9r-DBhBxEiwA9qYUpeFvlR6mt7u9OV05XYJuNTC-VMHbRFiHnkBlTg2UAf2xdatPCRfQJRoCPYMQAvD_BwE"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/chavi-abrol-b1a8b91a5/" target ="_blank" ><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
+        <a href="https://www.instagram.com/" target ="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a> 
+    </div>
+    <div class="contact">
+        <h3>Contact Us</h3>
+        <a target ="_blank" href="https://api.WhatsApp.com/send?phone=+917051977557"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+        <a target ="_blank" href="tel: +917051977557"><i class="fa fa-phone" aria-hidden="true"></i></a>
+        <a target ="_blank" href="mailto: chaviabrol@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+    </div>
+    <hr>
+    <p>Copyright &copy; 2021 lighting. All rights reserved </p>
+
+</footer>
+<script >
+    
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbySQdaYvBCuH0ZBbtFy2kz_8QwGwZ6kIbUgqqba4yIe_HPTp2FpudxQtm8fyrZq6AV7FA/exec'
+            const form = document.forms['googlesheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+</script>
+</body>   
+</html>
